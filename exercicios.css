@@ -1,0 +1,19 @@
+.corpo_do_app {
+  margin: 0 auto;
+
+}
+
+.textarea-custom {
+  width: 600px;
+  height: 250px;
+
+}
+
+.manual-btn {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.manual-btn:hover {
+  background-color: green;
+}

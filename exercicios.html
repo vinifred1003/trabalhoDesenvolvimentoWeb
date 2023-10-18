@@ -1,30 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="exercicios.css">
   <title>Execicios</title>
   <h1>Informações do Aluno</h1>
   <p>Nome: Vinícius F Frederico</p>
   <p>Turma: 2023</p>
-</head>
-<body>
   <h1>Soluções de Exercicios</h1>
-  <article>
-    <label for="entrada">Entrada:</label>
-    <input type="text" id="entrada" name="entrada"><br><br>
-  </article>
-  
-  <article>
-    <textarea id="visor"></textarea>
-  </article>
+</head>
 
+<body>
+  <div class=corpo_do_app>
+    <div class=slides>
+      <div class="slide first">
+        <article>
+          <label for="entrada">Entrada:</label>
+          <input type="text" id="entrada" name="entrada"><br><br>
+        </article>
+
+        <article>
+          <textarea class="textarea-custom" id="codigo"></textarea>
+        </article>
+        <article>
+          <button>Executar</button>
+        </article>
+      </div>
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+        <div class="auto-btn5"></div>
+      </div>
+
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+      <input type="radio" name="radio-btn" id="radio5">
+
+    </div>
+
+    <div class="manual-navigation">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
+      <label for="radio5" class="manual-btn"></label>
+    </div>
+
+  </div>
 
 </body>
 <footer>
-  <article>
-    <button>Executar</button>
-  </article>
+
 </footer>
 <script src="exercicios.js"></script>
+
 </html>
