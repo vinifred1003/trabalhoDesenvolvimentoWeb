@@ -1,41 +1,64 @@
 .corpo_do_app {
   margin: 0 auto;
+}
 
+.slides {
+  width: 1000%;
+  height: 500px;
+  display: flex;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
 }
 
 .textarea-custom {
+  margin-top: -300px;
   width: 600px;
   height: 250px;
 
 }
 
-.botao{
-visibility: hidden;
+.botao {
+  visibility: hidden;
 }
-  .manual-navigation{
-    position: absolute;
-    width: 575px;
-    margin-top: -110px;
-    display:flex;
-    justify-content: center;
-  }
 
- .manual-btn {
+.manual-navigation {
+  position: absolute;
+  width: 575px;
+  margin-top: -93px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
   border: 1px solid black;
   padding: 5px;
-   border-radius: 10px; 
+  border-radius: 10px;
   cursor: pointer;
   height: 1px;
   transition: 0.5s;
 }
-.manual-btn:not(:last-child){
+
+.manual-btn:not(:last-child) {
   margin-right: 40px;
 }
+
 .manual-btn:hover {
-  background-color:cyan
-}   
-.navigation-auto div{
- 
+  background-color: cyan
+}
+
+#radio1:checked~.first {
+  margin-left: 0;
+}
+
+#radio2:checked~.first {
+  margin-left: -25%;
+}
+
+.navigation-auto div {
+
   border: 1px solid black;
   padding: 5px;
   border-radius: 10px;
@@ -43,24 +66,24 @@ visibility: hidden;
   transition: 1s;
 }
 
-.navigation-auto{
-  
+.navigation-auto {
+
   position: absolute;
   width: 575px;
   margin-top: -53.25px;
   display: flex;
   justify-content: center;
-  
+
 }
 
-.navigation-auto div:not(:last-child){
+.navigation-auto div:not(:last-child) {
   margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
-background-color: cyan;
+#radio1:checked~.navigation-auto .auto-btn1 {
+  background-color: cyan;
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2{
+#radio2:checked~.navigation-auto .auto-btn2 {
   background-color: cyan;
-  }
+}
