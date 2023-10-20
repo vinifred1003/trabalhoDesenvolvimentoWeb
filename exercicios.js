@@ -1,21 +1,29 @@
+var saida = document.getElementById("codigo");
+
 function divisores(num) {
-  let divisor = 0;
+  num = +num;
+  let divisor=0;
   for (let i = 0; i < num; i++) {
     if (num % i == 0) {
-      divisor = i;
-      divisor++
+      divisor += i;
     }
   }
-  console.log(divisor)
+  saida.value=divisor.toString()
 };
-divisores(9);
 
-function distanciaEuclidiana(x1, x2, y1, y2) {
+function distanciaEuclidiana(cordenadas) {
+  lista_de_valores=cordenadas.split(" ")
+  for(let i=0;i<lista_de_valores.length;i++){
+    lista_de_valores[i]= +lista_de_valores[i]
+  } 
+  x1=lista_de_valores[0]
+  x2=lista_de_valores[1]
+  y1=lista_de_valores[2]
+  y2=lista_de_valores[3]
   let result = ((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2))
   result = Math.sqrt(result)
-  console.log(result.toFixed(2));
+  saida.value = result.toFixed(2).toString()
 }
-distanciaEuclidiana(10, 20, 5, 10)
 
 function contadorPalavras(frase) {
   let semVirgula = frase.replace(/,/g, "")
@@ -33,7 +41,7 @@ function contadorPalavras(frase) {
       }
     }
   }
-  console.log(contadorDePalavras);
+  saida.value=contadorDePalavras;
 }
 
 
@@ -49,9 +57,9 @@ function identificadorDeMatriz(matriz) {
   }
   console.log(`Essa é uma matriz de dimensão ${numLinhas} X ${numColunas}`);
 }
-identificadorDeMatriz("1468;3567;1324");
 
 function fibonaci(quant) {
+  quant= +quant
   let x, z = 0
   let y = 1
   if (quant < 2) {
@@ -66,8 +74,39 @@ function fibonaci(quant) {
       x = y + z
       z = y
       y = x
-      console.log(x)
+      saida.value= x.toString();
     }
   }
 }
-fibonaci(2)
+
+let  opcaoSelecionada
+document.getElementById("verificar").addEventListener("click", function () {
+  var opcoes = document.getElementsByName("radio-btn");
+
+  for (var i = 0; i < opcoes.length; i++) {
+      if (opcoes[i].checked) {
+          opcaoSelecionada = opcoes[i].id;
+          break; 
+      }
+    }
+})
+
+function execute(opcaoSelecionada){
+  var campoTexto = document.getElementById("entrada");
+  var valorInserido = campoTexto.value;
+  if (opcaoSelecionada=="radio1"){
+    divisores(valorInserido)
+  }
+  else if(opcaoSelecionada=="radio2"){
+    distanciaEuclidiana(valorInserido)
+  }
+  else if(opcaoSelecionada=="radio3"){
+    contadorPalavras(valorInserido)
+  }
+  else if(opcaoSelecionada=="radio4"){
+    identificadorDeMatriz(valorInserido)
+  }
+  else if(opcaoSelecionada=="radio      5"){
+    fibonaci(valorInserido)
+  }
+}
