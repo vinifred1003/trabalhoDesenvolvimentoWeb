@@ -1,3 +1,5 @@
+
+
 .corpo_do_app {
   margin: 0 auto;
   overflow: hidden;
@@ -6,7 +8,7 @@
 .slides {
   margin: 0 auto;
   width: 600%;
-  height: 750px;
+  height: 600px;
   display: flex;
 
 }
@@ -20,15 +22,18 @@ p {
 }
 
 .slide {
-  width: 25%;
-  position: relative;
+   width: 25%; 
+   position: relative; 
 
 }
-
+.first{
+  
+  height: 600px;
+}
 
 .textarea-custom {
   position: absolute;
-  margin-top: -325px;
+  margin-top: -130px;
   width: 500px;
   height: 100px;
 
@@ -38,7 +43,7 @@ p {
 .manual-navigation {
   position: absolute;
   width: 575px;
-  margin-top: -275px;
+  margin-top: -87px;
   display: flex;
   justify-content: center;
 }
@@ -94,7 +99,7 @@ p {
 
   position: absolute;
   width: 575px;
-  margin-top: 545px;
+  margin-top: 585px;
   display: flex;
   justify-content: center;
 
@@ -131,5 +136,5 @@ p {
 
 #botao {
   position: absolute;
-  margin-top: -220px;
+  margin-top: -25px;
 }
