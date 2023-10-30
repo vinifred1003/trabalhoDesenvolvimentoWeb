@@ -47,15 +47,14 @@ function contadorPalavras(frase) {
 
 
 function identificadorDeMatriz(matriz) {
-  let numLinhas = 1
+  let numLinhas =0
   let numColunas = 0
-  for (let i = 0; i < matriz.length; i++) {
-    if (";" == matriz[i]) {
-      numLinhas++
-    }
+
     matrizCortada = matriz.split(';')
-    numColunas = matrizCortada[0].length
-  }
+    numLinhas= matrizCortada.length;
+    matrizCortadaCortada = matrizCortada[0].split(" ");
+    numColunas=matrizCortadaCortada.length;
+  
   saida.value = `Essa é uma matriz de dimensão ${numLinhas} X ${numColunas}`;
 }
 
