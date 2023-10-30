@@ -24,7 +24,9 @@ p {
 .slide {
    width: 25%; 
    position: relative; 
-
+}
+.slide img{
+width: 500px;
 }
 .first{
   
@@ -135,6 +137,14 @@ p {
 }
 
 #botao {
+  height: 4%;
+  color:white;
+  background-color: rgb(69, 211, 69);
   position: absolute;
   margin-top: -25px;
+}
+
+#botao:hover{
+  background-color: green;
+  transition: 0.5s;
 }
